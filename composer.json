@@ -1,0 +1,43 @@
+{
+    "name": "brunocfalcao/laraflash-dal",
+    "description": "Laraflash Data Access Layer",
+    "type": "library",
+    "keywords": [
+        "laraflash",
+        "laravel",
+        "brunocfalcao"
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "~5.8.0",
+        "willvincent/feeds": "^1.1",
+        "kitetail/zttp": "^0.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraflash\\DAL\\": "src/"
+        },
+        "files": [
+            "src/helpers.php",
+            "src/simpledom.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laraflash",
+            "email": "bruno.falcao@laraflash.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laraflash\\DAL\\Providers\\BaseServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
