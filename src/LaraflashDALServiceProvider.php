@@ -2,7 +2,6 @@
 
 namespace Laraflash\DAL;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 

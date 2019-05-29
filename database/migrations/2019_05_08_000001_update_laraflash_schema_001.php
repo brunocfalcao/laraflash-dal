@@ -1,13 +1,11 @@
 <?php
 
-use Illuminate\Support\Carbon;
+use Laraflash\DAL\Models\DataSource;
+use Laraflash\DAL\Models\CategoryMap;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Laraflash\DAL\Models\DataSource;
-use Illuminate\Database\Migrations\Migration;
-use Laraflash\DAL\Models\CategoryMap;
-use Laraflash\DAL\Crawlers\RssCrawler;
 use Laraflash\DAL\Models\CategoryPosition;
+use Illuminate\Database\Migrations\Migration;
 
 class UpdateLaraflashSchema001 extends Migration
 {
@@ -174,259 +172,258 @@ class UpdateLaraflashSchema001 extends Migration
         // Data seed.
         CategoryPosition::create(['article_category' => 'Other',
                                   'navbar_position' => 99,
-                                  'square_position' => 99]);
+                                  'square_position' => 99, ]);
 
         CategoryPosition::create(['article_category' => 'Podcast',
                                   'navbar_position' => 90,
-                                  'square_position' => 90]);
+                                  'square_position' => 90, ]);
 
         CategoryPosition::create(['article_category' => 'Blog',
                                   'navbar_position' => 10,
-                                  'square_position' => 10]);
+                                  'square_position' => 10, ]);
 
         CategoryPosition::create(['article_category' => 'Interview',
                                   'navbar_position' => 70,
-                                  'square_position' => 70]);
+                                  'square_position' => 70, ]);
 
         CategoryPosition::create(['article_category' => 'Tutorial',
                                   'navbar_position' => 20,
-                                  'square_position' => 20]);
+                                  'square_position' => 20, ]);
 
         CategoryPosition::create(['article_category' => 'Job',
                                   'navbar_position' => 50,
-                                  'square_position' => 50]);
+                                  'square_position' => 50, ]);
 
         CategoryPosition::create(['article_category' => 'Package',
                                   'navbar_position' => 40,
-                                  'square_position' => 40]);
+                                  'square_position' => 40, ]);
 
         CategoryPosition::create(['article_category' => 'Tips & Tricks',
                                   'navbar_position' => 30,
-                                  'square_position' => 30]);
+                                  'square_position' => 30, ]);
 
         CategoryMap::create(['feed_category' => 'life',
-                             'article_category' => 'Other']);
+                             'article_category' => 'Other', ]);
 
         CategoryMap::create(['feed_category' => 'podcast',
-                             'article_category' => 'Podcast']);
+                             'article_category' => 'Podcast', ]);
 
         CategoryMap::create(['feed_category' => 'laravel business',
-                             'article_category' => 'Blog']);
+                             'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'interviews',
-                             'article_category' => 'Interview']);
+                             'article_category' => 'Interview', ]);
 
         CategoryMap::create(['feed_category' => 'featured',
-                             'article_category' => 'Blog']);
+                             'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'programming',
-                             'article_category' => 'Blog']);
+                             'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'web development',
-                            'article_category' => 'Blog']);
+                            'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'Learn Laravel Tutorials, Tips And Guides',
-                            'article_category' => 'Tutorial']);
+                            'article_category' => 'Tutorial', ]);
 
         CategoryMap::create(['feed_category' => 'Job',
-                            'article_category' => 'Job']);
+                            'article_category' => 'Job', ]);
 
         CategoryMap::create(['feed_category' => 'Laravel Tech',
-                            'article_category' => 'Blog']);
+                            'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'Laravel Packages',
-                            'article_category' => 'Package']);
+                            'article_category' => 'Package', ]);
 
         CategoryMap::create(['feed_category' => 'blog',
-                            'article_category' => 'Blog']);
+                            'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'tutorials',
-                            'article_category' => 'Tutorial']);
+                            'article_category' => 'Tutorial', ]);
 
         CategoryMap::create(['feed_category' => 'news',
-                            'article_category' => 'Blog']);
+                            'article_category' => 'Blog', ]);
 
         CategoryMap::create(['feed_category' => 'tricks',
-                            'article_category' => 'Tips & Tricks']);
+                            'article_category' => 'Tips & Tricks', ]);
 
         CategoryMap::create(['feed_category' => 'tutorial',
-                            'article_category' => 'Tutorial']);
+                            'article_category' => 'Tutorial', ]);
 
         CategoryMap::create(['feed_category' => 'package',
-                            'article_category' => 'Package']);
+                            'article_category' => 'Package', ]);
 
         CategoryMap::create(['feed_category' => 'other',
-                            'article_category' => 'Other']);
+                            'article_category' => 'Other', ]);
 
         CategoryMap::create(['feed_category' => 'tips & tricks',
-                            'article_category' => 'Tips & Tricks']);
+                            'article_category' => 'Tips & Tricks', ]);
 
         CategoryMap::create(['feed_category' => 'interview',
-                            'article_category' => 'Interview']);
+                            'article_category' => 'Interview', ]);
 
         // Load primary data sources.
         DataSource::create(['name' => 'Laraning',
                                       'description' => 'Laraning - You don\'t need to be an expert to learn Laravel!',
                                       'website_url' => 'https://www.laraning.com',
                                       'feed_url' => 'https://www.laraning.com/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaraningCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaraningCrawler', ]);
 
         DataSource::create(['name' => 'Laracasts',
                                       'description' => 'Laracasts - It\'s kinda like Netflix for your Career!',
                                       'website_url' => 'htps://www.laracasts.com',
                                       'feed_url' => 'https://laracasts.com/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaracastsCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaracastsCrawler', ]);
 
         DataSource::create(['name' => 'Laravel News',
                                       'description' => 'The official Laravel News source',
                                       'website_url' => 'https://www.laravel-news.com',
                                       'feed_url' => 'https://feed.laravel-news.com/',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelNewsCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelNewsCrawler', ]);
 
         DataSource::create(['name' => 'Laravel Daily',
                                       'description' => 'Laravel Solutions for your Business',
                                       'website_url' => 'http://laraveldaily.com',
                                       'feed_url' => 'http://laraveldaily.com/feed/',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelDailyCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelDailyCrawler', ]);
 
         DataSource::create(['name' => 'Murze.be',
                                       'description' => 'A blog on Laravel and PHP from Freek Van der Herten',
                                       'website_url' => 'http://murze.be',
                                       'feed_url' => 'https://murze.be/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MurzeCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MurzeCrawler', ]);
 
         DataSource::create(['name' => 'LaraJobs',
                                       'description' => 'The Artisan Employment Connection',
                                       'website_url' => 'https://larajobs.com',
                                       'feed_url' => 'https://larajobs.com/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaraJobsCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaraJobsCrawler', ]);
 
         DataSource::create(['name' => 'Matt Stauffer Blog',
                                       'description' => 'Partner at Tighten',
                                       'website_url' => 'http://mattstauffer.com',
                                       'feed_url' => 'https://mattstauffer.com/blog/feed.atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MattStaufferBlogCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MattStaufferBlogCrawler', ]);
 
         DataSource::create(['name' => 'Vegibit',
                                       'description' => 'Technology and Development website that offers detailed tutorials, inspiration, tips and tricks for Professionals in the Technology Space',
                                       'website_url' => 'http://vegibit.com/tag/laravel',
                                       'feed_url' => 'https://vegibit.com/tag/laravel/feed/',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\VegibitCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\VegibitCrawler', ]);
 
         DataSource::create(['name' => 'Eric L Barnes',
                                       'description' => 'Journal & Notebook',
                                       'website_url' => 'https://ericlbarnes.com/tag/laravel/',
                                       'feed_url' => 'https://ericlbarnes.com/tag/laravel/feed/',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\EricBarnesCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\EricBarnesCrawler', ]);
 
         DataSource::create(['name' => 'Neon Tsunami',
                                       'description' => 'A Blog on Laravel & Rails',
                                       'website_url' => 'https://www.neontsunami.com/tags/laravel',
                                       'feed_url' => 'https://www.neontsunami.com/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\NeonTsunamiCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\NeonTsunamiCrawler', ]);
 
         DataSource::create(['name' => 'Laravel Tricks',
                                       'description' => 'Laravel tricks, from Tighten',
                                       'website_url' => 'https://laravel-tricks.com',
                                       'feed_url' => 'https://laravel-tricks.com/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelTricksCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelTricksCrawler', ]);
 
         DataSource::create(['name' => 'Cloudways',
                                       'description' => 'Laravel Tips and Tricks',
                                       'website_url' => 'https://www.cloudways.com/blog/laravel/',
                                       'feed_url' => 'https://www.cloudways.com/blog/laravel/feed/',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\CloudwaysCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\CloudwaysCrawler', ]);
 
         DataSource::create(['name' => 'Larastream',
                                       'description' => 'Larastream - Like Twitch, but for Laravel. ',
                                       'website_url' => 'https://www.larastream.com',
                                       'feed_url' => 'https://www.larastream.com/feed',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LarastreamCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LarastreamCrawler', ]);
 
         DataSource::create(['name' => 'Full Stack Radio',
                                       'description' => 'Full Stack Radio, by Adam Wathan',
                                       'website_url' => 'http://www.fullstackradio.com/',
                                       'feed_url' => 'https://rss.simplecast.com/podcasts/279/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\FullStackRadioPodcastCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\FullStackRadioPodcastCrawler', ]);
 
         DataSource::create(['name' => 'Laracasts Snippets',
                                       'description' => 'Laracasts snippets by Jeffrey Way',
                                       'website_url' => 'https://laracasts.simplecast.fm/',
                                       'feed_url' => 'https://rss.simplecast.com/podcasts/1486/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaracastsPodcastCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaracastsPodcastCrawler', ]);
 
         DataSource::create(['name' => 'Laravel Podcast',
                                       'description' => 'Official Laravel Podcasts',
                                       'website_url' => 'http://www.laravelpodcast.com/',
                                       'feed_url' => 'https://rss.simplecast.com/podcasts/3894/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelPodcastCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelPodcastCrawler', ]);
 
         DataSource::create(['name' => 'Laravel Portugal Podcast',
                                       'description' => 'Official Laravel Portugal Podcast',
                                       'website_url' => 'http://www.laravel.pt/',
                                       'feed_url' => 'https://rss.simplecast.com/podcasts/4397/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelPortugalPodcastCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\LaravelPortugalPodcastCrawler', ]);
 
         DataSource::create(['name' => 'North Meets South Podcast',
                                       'description' => 'Jacob Bennett and Michael Dyrynda conquer a 14.5 hour time difference to talk about life as web developers',
                                       'website_url' => 'http://www.northmeetssouth.audio/',
                                       'feed_url' => 'https://rss.simplecast.com/podcasts/2072/rss',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\NorthMeetsSouthPodcastCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\NorthMeetsSouthPodcastCrawler', ]);
 
         DataSource::create(['name' => 'Medium',
                                       'description' => 'Laravel Medium blogs',
                                       'website_url' => 'https://medium.com/tag/laravel/',
                                       'feed_url' => 'https://medium.com/tag/laravel/latest?format=json',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumJsonCrawler']);
-
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumJsonCrawler', ]);
 
         DataSource::create(['name' => 'Taylor Otwell Tweets',
                                       'description' => 'Taylor Otwell Tweets',
                                       'website_url' => 'https://twitter.com/taylorotwell',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=taylorotwell&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsTaylorOtwellCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsTaylorOtwellCrawler', ]);
 
         DataSource::create(['name' => 'Laravel Php Tweets',
                                       'description' => 'Laravel PHP Tweets',
                                       'website_url' => 'https://twitter.com/laravelphp',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=laravelphp&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsLaravelPhpCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsLaravelPhpCrawler', ]);
 
         DataSource::create(['name' => 'Laravel News Tweets',
                                       'description' => 'Laravel News Tweets',
                                       'website_url' => 'https://twitter.com/laravelnews',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=laravelnews&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsLaravelNewsCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsLaravelNewsCrawler', ]);
 
         DataSource::create(['name' => 'Daily Laravel Tweets',
                                       'description' => 'Daily Laravel Tweets',
                                       'website_url' => 'https://twitter.com/dailylaravel',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=dailylaravel&norep=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsDailyLaravelCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsDailyLaravelCrawler', ]);
 
         DataSource::create(['name' => 'Caleb Porzio Tweets',
                                       'description' => 'Caleb Porzio Tweets',
                                       'website_url' => 'https://twitter.com/dailylaravel',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=calebporzio&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsCalebPorzioCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsCalebPorzioCrawler', ]);
 
         DataSource::create(['name' => 'Nuno Maduro Tweets',
                                       'description' => 'Nuno Maduro Tweets',
                                       'website_url' => 'https://twitter.com/enunomaduro',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=enunomaduro&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsNunoMaduroCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsNunoMaduroCrawler', ]);
 
         DataSource::create(['name' => 'Bruno Falcao Tweets',
                                       'description' => 'Bruno Falcao Tweets',
                                       'website_url' => 'https://twitter.com/enunomaduro',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=brunocfalcao&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsBrunoFalcaoCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsBrunoFalcaoCrawler', ]);
 
         DataSource::create(['name' => 'Freek Murze Tweets',
                                       'description' => 'Freek Murze Tweets',
                                       'website_url' => 'https://twitter.com/freekmurze',
                                       'feed_url' => 'http://rssbridge.waygou.com/?action=display&bridge=Twitter&u=freekmurze&norep=on&noretweet=on&format=Atom',
-                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsFreekMurzeCrawler']);
+                                      'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\TweetsFreekMurzeCrawler', ]);
 
         // Clean thumbnails.
         File::cleanDirectory(storage_path('app/public/images'));

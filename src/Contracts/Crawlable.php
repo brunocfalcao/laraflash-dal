@@ -2,9 +2,6 @@
 
 namespace Laraflash\DAL\Contracts;
 
-use Laraflash\DAL\Models\RssFeedSourceDriver;
-use \Exception;
-
 interface Crawlable
 {
     public function process();

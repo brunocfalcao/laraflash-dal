@@ -7,13 +7,13 @@ use Laraflash\DAL\Abstracts\RssCrawler;
 
 class TweetsLaravelLinksCrawler extends RssCrawler
 {
-    function validate($item)
+    public function validate($item)
     {
         // Continue only if news id doesn't exist and laravel appears on title or description.
-        return (!Article::where('uid', $item->get_id())
+        return ! Article::where('uid', $item->get_id())
                             ->where('data_source_id', $this->source->id)
                             ->exists() && (strpos(strtolower($item->get_title()), 'laravel') !== false ||
-                                           strpos(strtolower($item->get_description()), 'laravel') !== false)) ;
+                                           strpos(strtolower($item->get_description()), 'laravel') !== false);
     }
 
     public function parse($item)

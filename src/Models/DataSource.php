@@ -10,7 +10,7 @@ class DataSource extends Model
     use Cachable;
 
     protected $casts = ['crawler_class' => 'object',
-                        'last_crawl_at' => 'datetime'];
+                        'last_crawl_at' => 'datetime', ];
 
     protected $guarded = [];
 

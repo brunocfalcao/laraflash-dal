@@ -2,9 +2,7 @@
 
 namespace Laraflash\DAL\Models;
 
-use Illuminate\Support\Facades\Log;
 use Illuminate\Database\Eloquent\Model;
-use Laraflash\DAL\Models\CategoryMap;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Article extends Model
@@ -27,7 +25,7 @@ class Article extends Model
     {
         // Empty model? Return the kebab case.
         return $this->belongsTo('Laraflash\DAL\Models\Thumbnail')->withDefault(['hash' => kebab_case($this->dataSource->name),
-                                                                                        'filename' => kebab_case($this->dataSource->name)]);
+                                                                                        'filename' => kebab_case($this->dataSource->name), ]);
     }
 
     public function scopeNewest($query)
@@ -46,7 +44,7 @@ class Article extends Model
             } else {
                 return $value;
             }
-        };
+        }
 
         return $mappedCategory;
     }
@@ -55,7 +53,7 @@ class Article extends Model
     {
         if (blank($value)) {
             return $this->dataSource->website_url;
-        };
+        }
 
         return $value;
     }
