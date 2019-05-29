@@ -1,1 +1,1 @@
-# laraflash-dal
+# Laraflash data access layer
