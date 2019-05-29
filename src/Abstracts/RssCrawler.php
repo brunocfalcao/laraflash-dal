@@ -2,13 +2,8 @@
 
 namespace Laraflash\DAL\Abstracts;
 
-use Zttp\Zttp;
-use \Exception;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\File;
 use Laraflash\DAL\Models\Article;
-use Laraflash\DAL\Abstracts\Crawler;
-use Laraflash\DAL\Models\CategoryMap;
 use willvincent\Feeds\Facades\FeedsFacade as Feeds;
 
 class RssCrawler extends Crawler
@@ -30,10 +25,10 @@ class RssCrawler extends Crawler
         if ($this->items->count() == 0) {
             $this->log('No crawable items found.');
             $this->items = collect();
-        };
+        }
     }
 
-    function sanitize($item)
+    public function sanitize($item)
     {
         $this->sanitized->title = $this->sanitizeField($item->get_title());
         $this->sanitized->url = $this->sanitizeField($item->get_link());
@@ -47,12 +42,12 @@ class RssCrawler extends Crawler
         $this->sanitized->displayed_author = $this->sanitized->author;
     }
 
-    function uid($item)
+    public function uid($item)
     {
         return $item->get_id();
     }
 
-    function parse($item)
+    public function parse($item)
     {
         $this->article = new Article();
         $this->article->uid = $this->uid($item);
@@ -69,9 +64,9 @@ class RssCrawler extends Crawler
         $this->article->feed_type = 'atom/rss';
     }
 
-    function validate($item)
+    public function validate($item)
     {
         // Continue only if news id doesn't exist.
-        return !Article::where('uid', $item->get_id())->exists();
+        return ! Article::where('uid', $item->get_id())->exists();
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
+use Laraflash\DAL\Models\Article;
 use Illuminate\Support\Facades\DB;
+use Laraflash\DAL\Models\CategoryMap;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Laraflash\DAL\Models\Article;
 use Illuminate\Database\Migrations\Migration;
-use Laraflash\DAL\Models\CategoryMap;
 
 class UpdateLaraflashSchema005 extends Migration
 {
@@ -51,7 +51,7 @@ class UpdateLaraflashSchema005 extends Migration
     public function down()
     {
         Schema::table('articles', function (Blueprint $table) {
-             $table->dropColumn('category_mapped');
+            $table->dropColumn('category_mapped');
         });
 
         DB::raw("delete from category_maps where feed_category in ('books',

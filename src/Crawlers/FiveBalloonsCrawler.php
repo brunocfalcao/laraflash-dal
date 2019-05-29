@@ -14,8 +14,9 @@ class FiveBalloonsCrawler extends RssCrawler
     public function fetchImage($link)
     {
         $htmlDom = file_get_html($link);
+
         return rescue(function () use ($htmlDom) {
-            return optional($htmlDom->find("p > img", 0))->getAttribute('src');
+            return optional($htmlDom->find('p > img', 0))->getAttribute('src');
         });
     }
 

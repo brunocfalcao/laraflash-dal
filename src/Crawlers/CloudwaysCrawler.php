@@ -13,8 +13,8 @@ class CloudwaysCrawler extends RssCrawler
         $start = strpos($item->get_description(), '" src') + 7;
         $newString = substr($item->get_description(), $start);
         $end = strpos($newString, '" ');
-        if ($start!== false && $end !== false) {
+        if ($start !== false && $end !== false) {
             $this->sanitized->thumbnail = substr($item->get_description(), $start, $end);
-        };
+        }
     }
 }

@@ -14,8 +14,9 @@ class TheWebTierCrawler extends RssCrawler
     public function fetchImage($link)
     {
         $htmlDom = file_get_html($link);
+
         return rescue(function () use ($htmlDom) {
-            return explode('?', optional($htmlDom->find("img.wp-post-image", 0))->getAttribute('src'))[0];
+            return explode('?', optional($htmlDom->find('img.wp-post-image', 0))->getAttribute('src'))[0];
         });
     }
 }

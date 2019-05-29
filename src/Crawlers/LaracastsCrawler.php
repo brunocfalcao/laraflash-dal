@@ -16,9 +16,10 @@ class LaracastsCrawler extends RssCrawler
     public function fetchImage($link)
     {
         $htmlDom = file_get_html($link);
+
         return rescue(function () use ($htmlDom) {
-            return 'https://www.laracasts.com' .
-                   optional($htmlDom->find("img.series-thumbnail", 0))->getAttribute('data-cfsrc');
+            return 'https://www.laracasts.com'.
+                   optional($htmlDom->find('img.series-thumbnail', 0))->getAttribute('data-cfsrc');
         });
     }
 

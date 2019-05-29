@@ -7,19 +7,19 @@ use Laraflash\DAL\Abstracts\RssCrawler;
 
 class MikaTeachCrawler extends RssCrawler
 {
-    function validate($item)
+    public function validate($item)
     {
         // Continue only if news id doesn't exist and laravel appears on title or description.
-        return (!Article::where('uid', $item->get_id())
+        return ! Article::where('uid', $item->get_id())
                             ->where('data_source_id', $this->source->id)
                             ->exists() && (strpos(strtolower($item->get_title()), 'laravel') !== false ||
-                                           strpos(strtolower($item->get_description()), 'laravel') !== false)) ;
+                                           strpos(strtolower($item->get_description()), 'laravel') !== false);
     }
 
     public function thumbnail($item)
     {
         $htmlDom = file_get_html($item->get_link());
-        $this->sanitized->thumbnail = optional($htmlDom->find("img.td-backstretch", 0))
+        $this->sanitized->thumbnail = optional($htmlDom->find('img.td-backstretch', 0))
                                               ->getAttribute('src');
     }
 

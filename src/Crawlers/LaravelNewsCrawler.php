@@ -12,9 +12,9 @@ class LaravelNewsCrawler extends RssCrawler
         // in the first img tag.
         $start = strpos($item->get_description(), 'img src') + 9;
         $end = strpos($item->get_description(), '?');
-        if ($start!== false && $end !== false) {
-            $this->sanitized->thumbnail = substr($item->get_description(), $start, $end-$start);
-        };
+        if ($start !== false && $end !== false) {
+            $this->sanitized->thumbnail = substr($item->get_description(), $start, $end - $start);
+        }
     }
 
     public function parse($item)
