@@ -2,10 +2,10 @@
 
 namespace Laraflash\DAL;
 
+use Laraflash\DAL\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Laraflash\DAL\Models\User;
 
 class LaraflashDALServiceProvider extends ServiceProvider
 {
