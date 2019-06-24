@@ -1,6 +1,5 @@
 <?php
 
-
 if (! function_exists('remove_emoji')) {
     function remove_emoji($text)
     {
