@@ -15,10 +15,6 @@ class LaraflashDALServiceProvider extends ServiceProvider
 
         $timestamp = date('Y_m_d_His', time());
 
-        $this->publishes([
-            __DIR__.'/../Database/Migrations/update_laraflash_schema_001.php.stub' => $this->app->databasePath()."/migrations/{$timestamp}_update_laraflash_schema_001.php",
-        ], 'laraflash-update-schema-latest');
-
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         Auth::newGuard('laraflash-wave', User::class);

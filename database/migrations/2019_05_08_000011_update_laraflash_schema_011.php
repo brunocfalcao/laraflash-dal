@@ -12,12 +12,6 @@ class UpdateLaraflashSchema011 extends Migration
      */
     public function up()
     {
-        DataSource::create(['name' => 'Alfred Nutile Blog',
-                            'description' => 'Laravel, Angular practical solutions',
-                            'website_url' => 'https://alfrednutile.info',
-                            'feed_url' => 'https://alfrednutile.info/rss',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\AlfredNutileCrawler', ]);
-
         DataSource::create(['name' => 'Simon Archer Blog',
                             'description' => 'Manchester-based Freelance and Contract Web Developer',
                             'website_url' => 'https://www.archybold.com',
