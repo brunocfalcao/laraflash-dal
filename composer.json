@@ -13,7 +13,8 @@
         "willvincent/feeds": "^1.1",
         "kitetail/zttp": "^0.5.0",
         "genealabs/laravel-model-caching": "*",
-        "intervention/image": "^2.5"
+        "intervention/image": "^2.5",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0"
