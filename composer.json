@@ -11,6 +11,7 @@
         "php": "^7.2",
         "illuminate/support": "^6.0",
         "brunocfalcao/feeds": "^1.2",
+        "brunocfalcao/helpers": "^1.0",
         "kitetail/zttp": "^0.5.0",
         "genealabs/laravel-model-caching": "*",
         "intervention/image": "^2.5",
