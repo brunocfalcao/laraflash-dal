@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/support": "~5.8.0",
+        "illuminate/support": "~5.8.0|^6.0",
         "willvincent/feeds": "^1.1",
         "kitetail/zttp": "^0.5.0",
         "genealabs/laravel-model-caching": "*",
