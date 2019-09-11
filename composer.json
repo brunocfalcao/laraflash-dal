@@ -8,7 +8,7 @@
         "brunocfalcao"
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "illuminate/support": "^6.0",
         "brunocfalcao/feeds": "^1.2",
         "brunocfalcao/helpers": "^1.0",
