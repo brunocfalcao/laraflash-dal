@@ -2,8 +2,8 @@
 
 namespace Laraflash\DAL\Crawlers;
 
-use Laraflash\DAL\Models\DataSource;
 use Laraflash\DAL\Abstracts\MediumCrawler;
+use Laraflash\DAL\Models\DataSource;
 
 class MediumFreekMurzeCrawler extends MediumCrawler
 {

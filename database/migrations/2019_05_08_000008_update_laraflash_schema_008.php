@@ -1,7 +1,7 @@
 <?php
 
-use Laraflash\DAL\Models\CategoryMap;
 use Illuminate\Database\Migrations\Migration;
+use Laraflash\DAL\Models\CategoryMap;
 
 class UpdateLaraflashSchema008 extends Migration
 {

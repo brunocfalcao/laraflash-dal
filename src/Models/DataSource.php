@@ -2,8 +2,8 @@
 
 namespace Laraflash\DAL\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
 
 class DataSource extends Model
 {

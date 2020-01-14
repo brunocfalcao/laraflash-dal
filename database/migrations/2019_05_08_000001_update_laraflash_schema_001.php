@@ -1,11 +1,11 @@
 <?php
 
-use Laraflash\DAL\Models\DataSource;
-use Laraflash\DAL\Models\CategoryMap;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Laraflash\DAL\Models\CategoryPosition;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Laraflash\DAL\Models\CategoryMap;
+use Laraflash\DAL\Models\CategoryPosition;
+use Laraflash\DAL\Models\DataSource;
 
 class UpdateLaraflashSchema001 extends Migration
 {

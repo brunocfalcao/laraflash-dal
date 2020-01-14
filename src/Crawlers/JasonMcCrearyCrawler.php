@@ -2,8 +2,8 @@
 
 namespace Laraflash\DAL\Crawlers;
 
-use Laraflash\DAL\Models\Article;
 use Laraflash\DAL\Abstracts\RssCrawler;
+use Laraflash\DAL\Models\Article;
 
 class JasonMcCrearyCrawler extends RssCrawler
 {

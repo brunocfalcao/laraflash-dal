@@ -2,9 +2,9 @@
 
 namespace Laraflash\DAL\Crawlers;
 
+use Laraflash\DAL\Abstracts\MediumCrawler;
 use Laraflash\DAL\Models\Article;
 use Laraflash\DAL\Models\DataSource;
-use Laraflash\DAL\Abstracts\MediumCrawler;
 
 class MediumOndrejMirtesCrawler extends MediumCrawler
 {

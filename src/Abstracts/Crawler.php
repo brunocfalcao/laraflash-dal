@@ -2,14 +2,14 @@
 
 namespace Laraflash\DAL\Abstracts;
 
-use Zttp\Zttp;
-use Laraflash\DAL\Models\Thumbnail;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
+use Laraflash\DAL\Contracts\Crawlable;
+use Laraflash\DAL\Models\CategoryMap;
 use Laraflash\DAL\Models\CrawlerLog;
 use Laraflash\DAL\Models\DataSource;
-use Intervention\Image\Facades\Image;
-use Laraflash\DAL\Models\CategoryMap;
-use Laraflash\DAL\Contracts\Crawlable;
+use Laraflash\DAL\Models\Thumbnail;
+use Zttp\Zttp;
 
 abstract class Crawler implements Crawlable
 {

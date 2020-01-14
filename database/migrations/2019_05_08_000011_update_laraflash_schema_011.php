@@ -1,7 +1,7 @@
 <?php
 
-use Laraflash\DAL\Models\DataSource;
 use Illuminate\Database\Migrations\Migration;
+use Laraflash\DAL\Models\DataSource;
 
 class UpdateLaraflashSchema011 extends Migration
 {

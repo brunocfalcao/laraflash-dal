@@ -2,9 +2,9 @@
 
 namespace Laraflash\DAL\Abstracts;
 
-use Zttp\Zttp;
 use Illuminate\Support\Carbon;
 use Laraflash\DAL\Models\Article;
+use Zttp\Zttp;
 
 class MediumCrawler extends Crawler
 {
