@@ -25,7 +25,7 @@ class Article extends Model
     {
         // Empty model? Return the kebab case.
         return $this->belongsTo('Laraflash\DAL\Models\Thumbnail')->withDefault(['hash' => kebab_case($this->dataSource->name),
-                                                                                        'filename' => kebab_case($this->dataSource->name), ]);
+            'filename' => kebab_case($this->dataSource->name), ]);
     }
 
     public function scopeNewest($query)
