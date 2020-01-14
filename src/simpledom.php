@@ -1009,7 +1009,7 @@ class simple_html_dom_node
         // If the class or id is specified in a SEPARATE css file thats not on the page, go get it and do what we were just doing for the ones on the page.
 
         $result = ['height' => $height,
-                        'width' => $width, ];
+            'width' => $width, ];
 
         return $result;
     }

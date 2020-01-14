@@ -201,11 +201,11 @@ abstract class Crawler implements Crawlable
         }
 
         $this->log::create(['uid' => $this->process_uid,
-                            'data_source_id' => $this->source->id,
-                            'friendly_message' => $message,
-                            'error_message' => $error_message ?? null,
-                            'status' => $status ?? 'ok',
-                            'trace' => $trace ?? null,
+            'data_source_id' => $this->source->id,
+            'friendly_message' => $message,
+            'error_message' => $error_message ?? null,
+            'status' => $status ?? 'ok',
+            'trace' => $trace ?? null,
         ]);
     }
 

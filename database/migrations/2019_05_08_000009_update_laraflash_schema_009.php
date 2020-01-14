@@ -13,10 +13,10 @@ class UpdateLaraflashSchema009 extends Migration
     public function up()
     {
         DataSource::create(['name' => '5 Balloons',
-                            'description' => '5 Balloons',
-                            'website_url' => 'http://www.5balloons.info/',
-                            'feed_url' => 'http://www.5balloons.info/feed/',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\FiveBalloonsCrawler', ]);
+            'description' => '5 Balloons',
+            'website_url' => 'http://www.5balloons.info/',
+            'feed_url' => 'http://www.5balloons.info/feed/',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\FiveBalloonsCrawler', ]);
     }
 
     /**

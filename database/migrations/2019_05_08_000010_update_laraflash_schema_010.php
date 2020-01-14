@@ -13,34 +13,34 @@ class UpdateLaraflashSchema010 extends Migration
     public function up()
     {
         DataSource::create(['name' => 'Asked.io',
-                            'description' => 'Asked IO by Will Bowman',
-                            'website_url' => 'https://medium.com/asked-io',
-                            'feed_url' => 'https://medium.com/asked-io?format=json',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumAskedIoCrawler', ]);
+            'description' => 'Asked IO by Will Bowman',
+            'website_url' => 'https://medium.com/asked-io',
+            'feed_url' => 'https://medium.com/asked-io?format=json',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumAskedIoCrawler', ]);
 
         DataSource::create(['name' => 'Michael Brooks Blog',
-                            'description' => 'Newton Abbot Website Developer',
-                            'website_url' => 'https://michaelbrooks.co.uk/',
-                            'feed_url' => 'https://michaelbrooks.co.uk/feed/',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MichaelBrooksCrawler', ]);
+            'description' => 'Newton Abbot Website Developer',
+            'website_url' => 'https://michaelbrooks.co.uk/',
+            'feed_url' => 'https://michaelbrooks.co.uk/feed/',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MichaelBrooksCrawler', ]);
 
         DataSource::create(['name' => 'Pascal Baljet Blog',
-                            'description' => 'Blogposts about PHP, Laravel and other development topics',
-                            'website_url' => 'https://pascalbaljetmedia.com/en/blog',
-                            'feed_url' => 'https://pascalbaljetmedia.com/rss',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\PascalBaljetCrawler', ]);
+            'description' => 'Blogposts about PHP, Laravel and other development topics',
+            'website_url' => 'https://pascalbaljetmedia.com/en/blog',
+            'feed_url' => 'https://pascalbaljetmedia.com/rss',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\PascalBaljetCrawler', ]);
 
         DataSource::create(['name' => 'Sebastian De Deyne Blog',
-                            'description' => 'Sebastian De Deyne Blog',
-                            'website_url' => 'https://sebastiandedeyne.com/posts',
-                            'feed_url' => 'https://sebastiandedeyne.com/feed',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\SebastianDeDeyneCrawler', ]);
+            'description' => 'Sebastian De Deyne Blog',
+            'website_url' => 'https://sebastiandedeyne.com/posts',
+            'feed_url' => 'https://sebastiandedeyne.com/feed',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\SebastianDeDeyneCrawler', ]);
 
         DataSource::create(['name' => 'Ondrej Mirtes Medium',
-                            'description' => 'Ontrej Mirtes (Medium)',
-                            'website_url' => 'https://medium.com/@ondrejmirtes/latest',
-                            'feed_url' => 'https://medium.com/@ondrejmirtes/latest?format=json',
-                            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumOndrejMirtesCrawler', ]);
+            'description' => 'Ontrej Mirtes (Medium)',
+            'website_url' => 'https://medium.com/@ondrejmirtes/latest',
+            'feed_url' => 'https://medium.com/@ondrejmirtes/latest?format=json',
+            'crawler_class' => '\\Laraflash\\DAL\\Crawlers\\MediumOndrejMirtesCrawler', ]);
     }
 
     /**
